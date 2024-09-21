@@ -18,7 +18,10 @@ public class FindCommand extends Command {
      *
      * @param keyword The keyword to search for.
      */
-    public FindCommand(String keyword) {
+    public FindCommand(String keyword) throws LightException {
+        if (keyword == null || keyword.isEmpty()) {
+            throw new LightException("The keyword cannot be empty.");
+        }
         this.keyword = keyword;
     }
 
