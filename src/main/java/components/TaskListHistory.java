@@ -26,11 +26,9 @@ public class TaskListHistory extends ArrayList<TaskList> {
      * @return True if the task list is added successfully.
      */
     public boolean add(TaskList taskList) {
-        // Remove future states beyond the current pointer
         while (this.size() > this.currentPointer + 1) {
             this.remove(this.size() - 1);
         }
-        // Do not add the same task list
         if (this.size() > this.currentPointer && taskList.equals(this.get(this.currentPointer))) {
             return false;
         }
