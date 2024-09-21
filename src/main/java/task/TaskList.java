@@ -12,13 +12,14 @@ public class TaskList extends ArrayList<Task> {
 
     public TaskList(ArrayList<Task> taskList) {
         super();
-        for (int i = 0; i <taskList.size(); i++) {
+        for (int i = 0; i < taskList.size(); i++) {
             this.add(taskList.get(i).clone());
         }
     }
+
     public static <T> String arrayToNumberedString(ArrayList<T> array) {
         String taskString = IntStream.range(0, array.size()).mapToObj(number -> number + 1 + ". " + array.get(number)).map(Objects::toString)
-                .collect(Collectors.joining("\n")) ;
+                .collect(Collectors.joining("\n"));
         if (taskString.isEmpty()) {
             return "No tasks in the list.";
         }
@@ -40,10 +41,12 @@ public class TaskList extends ArrayList<Task> {
         }
         return new TaskList(foundTasks);
     }
+
     @Override
     public TaskList clone() {
         return new TaskList(this);
     }
+
     @Override
     public boolean equals(Object o) {
         if (o instanceof TaskList) {

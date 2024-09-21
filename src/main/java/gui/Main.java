@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class Main extends Application {
 
-    private Light light= new Light("./data/saved.txt");
+    private Light light = new Light("./data/saved.txt");
 
     /**
      * Starts the application.

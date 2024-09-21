@@ -10,7 +10,7 @@ import task.TaskList;
 /**
  * Represents a command to undo the last command.
  */
-public class UndoCommand extends Command{
+public class UndoCommand extends Command {
     public UndoCommand() {
         super();
     }

@@ -20,6 +20,7 @@ public class Event extends Task {
             throw new LightException("The start time of the event cannot be after the end time.");
         }
     }
+
     public Event(String description, LocalDateTime start, LocalDateTime end) throws LightException {
         super(description);
         this.start = start;
@@ -51,6 +52,7 @@ public class Event extends Task {
         newTask.isDone = this.isDone;
         return newTask;
     }
+
     @Override
     public String toString() {
         return "[E]" + super.toString() + "(from: " + start.format(DateTimeFormatter.ofPattern("MMM d yyyy HHmm")) + " to: " + end.format(DateTimeFormatter.ofPattern("MMM d yyyy HHmm")) + ")";

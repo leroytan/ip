@@ -18,21 +18,6 @@ public class Ui {
     }
 
     /**
-     * Displays a line break.
-     */
-    private static String lineBreak() {
-        String lineBreak = "____________________________________________________________\n";
-        return lineBreak;
-    }
-
-    /**
-     * Displays a welcome message.
-     */
-    public String welcome() {
-        return "Hello! I'm Light\nWhat can I do for you?" + lineBreak();
-    }
-
-    /**
      * Displays an error message.
      *
      * @param e The exception containing the error message to be displayed.

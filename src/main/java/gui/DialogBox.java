@@ -28,7 +28,7 @@ public class DialogBox extends HBox {
      * Creates a DialogBox with the specified text and image.
      *
      * @param text The text to be displayed in the dialog box.
-     * @param img The image to be displayed in the dialog box.
+     * @param img  The image to be displayed in the dialog box.
      */
     private DialogBox(String text, Image img) {
         try {
@@ -45,21 +45,10 @@ public class DialogBox extends HBox {
     }
 
     /**
-     * Flips the dialog box such that the ImageView is on the left.
-     */
-    private void flip() {
-        ObservableList<Node> tmp = FXCollections.observableArrayList(this.getChildren());
-        Collections.reverse(tmp);
-        getChildren().setAll(tmp);
-        setAlignment(Pos.TOP_LEFT);
-        dialog.getStyleClass().add("reply-label");
-    }
-
-    /**
      * Creates a DialogBox for the user with the specified text and image.
      *
      * @param text The text to be displayed in the dialog box.
-     * @param img The image to be displayed in the dialog box.
+     * @param img  The image to be displayed in the dialog box.
      * @return A DialogBox instance for the user.
      */
     public static DialogBox getUserDialog(String text, Image img) {
@@ -71,12 +60,23 @@ public class DialogBox extends HBox {
      * The dialog box is flipped such that the ImageView is on the left.
      *
      * @param text The text to be displayed in the dialog box.
-     * @param img The image to be displayed in the dialog box.
+     * @param img  The image to be displayed in the dialog box.
      * @return A DialogBox instance for Duke.
      */
     public static DialogBox getDukeDialog(String text, Image img) {
         var db = new DialogBox(text, img);
         db.flip();
         return db;
+    }
+
+    /**
+     * Flips the dialog box such that the ImageView is on the left.
+     */
+    private void flip() {
+        ObservableList<Node> tmp = FXCollections.observableArrayList(this.getChildren());
+        Collections.reverse(tmp);
+        getChildren().setAll(tmp);
+        setAlignment(Pos.TOP_LEFT);
+        dialog.getStyleClass().add("reply-label");
     }
 }
