@@ -7,6 +7,7 @@ public class Todo extends Task {
     public Todo(String description) throws LightException {
         super(description);
     }
+
     @Override
     public Task clone() {
         Task newTask = null;

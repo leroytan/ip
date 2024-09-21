@@ -5,8 +5,6 @@ import exceptions.LightException;
 import javafx.application.Platform;
 import task.TaskList;
 
-import java.util.NoSuchElementException;
-
 /**
  * Represents the main class of the components.Light program.
  */
