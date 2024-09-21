@@ -140,6 +140,41 @@ to
 3. [T][ ] read book
 ```
 
+### Finding tasks
+Finds tasks that contain the keyword.
+
+**Usage:** find KEYWORD
+
+**Example**: `find book`
+
+```
+1. [D][ ] return book (by: Dec 3 2022 0200)
+2. [T][ ] read book
+```
+
+### Instructions
+Displays the list of commands available.
+
+**Usage:** help
+
+**Example**: `help`
+
+```
+Here are the list of commands you can use:
+1. todo <description> - Adds a todo task to the task list.
+2. deadline <description> /by <date(DD/MM/YYYY)> <time(24HR)> - Adds a deadline task to the task list.
+3. event <description> /from <date(DD/MM/YYYY)> <time(24HR)> /to <date(DD/MM/YYYY)> <time(24HR)> - Adds an event task to the task list.
+4. list - Lists all tasks in the task list.
+5. mark <task number> - Marks a task as done.
+6. unmark <task number> - Marks a task as undone.
+7. delete <task number> - Deletes a task from the task list.
+8. find <keyword> - Finds tasks with the keyword in the task list.
+9. undo - Undoes the previous command.
+10. redo - Redoes the previous command.
+11. bye - Exits the program.
+12. help - Shows the list of commands you can use.
+```
+
 ### Exiting the application
 Exits the application.
 
