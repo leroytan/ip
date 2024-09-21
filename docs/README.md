@@ -1,6 +1,6 @@
 # Light User Guide
 
-![Product screenshot](../docs/Ui.png)
+![Product screenshot](Ui.png)
 
 
 Light is a Deathnote-themed task management application that helps users keep track of their tasks, deadlines, and events. It supports adding, listing, marking, unmarking, deleting tasks, and undoing/redoing actions.
